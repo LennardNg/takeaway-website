@@ -448,7 +448,7 @@ export default function LandingPage() {
                                     src={
                                         audience === "organizers"
                                             ? "/landing/Event_Org_Dashboard.png"
-                                            : "/landing/merchant_POS_SS.png"
+                                            : "/landing/merchant.png"
                                     }
                                     alt=""
                                     fill

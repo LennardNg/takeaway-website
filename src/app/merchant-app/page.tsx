@@ -77,7 +77,7 @@ export default function MerchantsComingSoonPage() {
                     <div className="relative mx-auto aspect-video w-full max-w overflow-hidden rounded-[42px] bg-slate-900 shadow-2xl">
                         {/* Replace with your actual screenshot */}
                         <Image
-                            src={"/landing/merchant_POS_SS.png"}
+                            src={"/landing/merchant.png"}
                             alt=""
                             fill
                             className="object-fill"
