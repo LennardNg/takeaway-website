@@ -350,9 +350,9 @@ export default function LandingPage() {
                     href: "/event-organizer",
                 },
                 bullets: [
-                    "Real-time visibility into vendor performance",
+                    "Real-time visibility into merchant performance",
                     "Commission tracking baked into every sale",
-                    "Organizer dashboard + vendor-friendly POS",
+                    "Organizer dashboard + merchant-friendly POS",
                 ],
             };
         }
@@ -367,12 +367,12 @@ export default function LandingPage() {
             ),
             perfectForTitle: "Perfect for:",
             perfectFor: [
-                "Event Vendors",
+                "Event Merchants",
                 "Home-based Brands",
                 "Cloud Kitchens",
                 "Retail Storefronts",
             ],
-            primary: { label: "Join as a Vendor", href: "/merchant-app" },
+            primary: { label: "Join as a Merchant", href: "/merchant-app" },
             bullets: [
                 "Tablet-optimized order taking & payments",
                 "Faster setup — reuse your menu and items",
@@ -385,7 +385,7 @@ export default function LandingPage() {
         // Right-side list in the mockup style, but events-focused.
         return [
             { icon: "pos" as const, label: "Event POS System" },
-            { icon: "tablet" as const, label: "Vendor Tablet POS" },
+            { icon: "tablet" as const, label: "Merchant Tablet POS" },
             { icon: "commission" as const, label: "Commission Tracking" },
             { icon: "reconcile" as const, label: "Payout Reconciliation" },
             { icon: "analytics" as const, label: "Sales Analytics" },
@@ -395,10 +395,9 @@ export default function LandingPage() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#F3F5F7] text-[#111]">
+        <div className="min-h-screen bg-linear-to-b from-white to-slate-50 text-[#111]">
             {/* Top bar */}
             <Header />
-
             {/* HERO */}
             <main className="mx-auto max-w px-6 pb-20 pt-12">
                 {/* tabs like mockup */}
@@ -427,7 +426,7 @@ export default function LandingPage() {
                                     : "text-slate-600 hover:text-slate-900"
                             )}
                         >
-                            For Vendors
+                            For Merchants
                         </button>
                     </div>
                 </div>
@@ -524,7 +523,7 @@ export default function LandingPage() {
                 <section className="mt-24 grid gap-16 lg:grid-cols-5">
                     {/* Left: headline + dashboard image */}
                     <div className="col-span-3 lg:flex lg:flex-col">
-                        <h2 className="text-[62px] font-extrabold leading-[1.05] tracking-tight">
+                        <h2 className="text-5xl font-extrabold leading-[1.05] tracking-tight">
                             An <span className="text-[#2B55A0]">aesthetic</span>{" "}
                             dashboard <br />
                             operationally{" "}
@@ -548,11 +547,11 @@ export default function LandingPage() {
 
                     {/* Right: Features list with icons */}
                     <div className="col-span-2 border-[#2952a3] border-4 rounded-[42px] shadow-2xl p-4">
-                        <h3 className="text-[62px] font-extrabold leading-[1.05] tracking-tight">
+                        <h3 className="text-5xl font-extrabold leading-[1.05] tracking-tight">
                             Features:
                         </h3>
 
-                        <ul className="mt-10 space-y-10">
+                        <ul className="mt-10 space-y-6">
                             {features.map((f) => (
                                 <li
                                     key={f.label}
@@ -561,7 +560,7 @@ export default function LandingPage() {
                                     <div className="shrink-0">
                                         <FeatureIcon name={f.icon} />
                                     </div>
-                                    <span className="text-[34px] font-medium">
+                                    <span className="text-2xl font-medium">
                                         {f.label}
                                     </span>
                                 </li>
@@ -569,13 +568,13 @@ export default function LandingPage() {
                         </ul>
 
                         {/* Small Events MVP callout */}
-                        <div className="mt-12 rounded-[22px] bg-white/60 p-6">
+                        <div className="mt-6 rounded-[22px] bg-white/60 p-6">
                             <p className="text-lg font-semibold text-[#111]">
-                                Built for Singapore-style vendor events
+                                Built for Singapore-style merchant events
                             </p>
                             <p className="mt-2 text-[#111]/70">
-                                Organizers get control + visibility. Vendors get
-                                a smooth, familiar POS. Commissions and
+                                Organizers get control + visibility. Merchants
+                                get a smooth, familiar POS. Commissions and
                                 reconciliation are tracked end-to-end.
                             </p>
                         </div>
@@ -587,7 +586,7 @@ export default function LandingPage() {
                 {/* Light extension: How it works (keeps the same aesthetic) */}
                 <section className="mt-24">
                     <h3 className="text-[56px] font-extrabold leading-[1.05]">
-                        From vendor onboarding to payouts — in 3 steps.
+                        From merchant onboarding to payouts — in 3 steps.
                     </h3>
 
                     <div className="mt-10 grid gap-8 md:grid-cols-3">
@@ -597,8 +596,8 @@ export default function LandingPage() {
                                 body: "Set dates, commission rules, and operational settings for the festival/bazaar.",
                             },
                             {
-                                title: "2) Onboard vendors",
-                                body: "Invite vendors, assign roles, and get them selling on the tablet POS quickly.",
+                                title: "2) Onboard merchants",
+                                body: "Invite merchants, assign roles, and get them selling on the tablet POS quickly.",
                             },
                             {
                                 title: "3) Track sales + reconcile",
@@ -632,15 +631,14 @@ export default function LandingPage() {
                             href="/merchant-app"
                             className="inline-flex items-center justify-center gap-4 rounded-full bg-[#D7F0FF] px-10 py-6 text-[22px] font-semibold text-[#111] hover:brightness-95"
                         >
-                            Join as Vendor
+                            Join as Merchant
                             <ArrowRightIcon className="h-6 w-6" />
                         </Link>
                     </div>
                 </section>
-
-                {/* Footer (simple, on-theme) */}
-                <Footer />
             </main>
+            {/* Footer (simple, on-theme) */}
+            <Footer />
         </div>
     );
 }

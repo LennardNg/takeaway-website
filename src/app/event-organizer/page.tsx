@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function OrganizerComingSoonPage() {
     return (
-        <div className="min-h-screen bg-[#F3F5F7] text-[#111]">
+        <div className="min-h-screen bg-linear-to-b from-white to-slate-50 text-[#111]">
             {/* Header */}
             <Header />
 
@@ -27,23 +27,23 @@ export default function OrganizerComingSoonPage() {
                         <h1 className="mt-6 text-[56px] font-extrabold leading-[1.05] tracking-tight">
                             The organizer dashboard for{" "}
                             <span className="text-[#2B55A0]">
-                                vendor events
+                                merchant events
                             </span>{" "}
                             is almost here.
                         </h1>
 
                         <p className="mt-6 text-[22px] leading-relaxed text-[#111]/75 max-w-2xl">
                             We’re building a streamlined way to run bazaars,
-                            festivals and pop-ups — from vendor onboarding to
+                            festivals and pop-ups — from merchant onboarding to
                             live sales visibility and post-event reconciliation.
                         </p>
 
                         {/* Highlights */}
                         <ul className="mt-10 space-y-4 text-[20px] text-[#111]/80">
                             {[
-                                "Live vendor sales + performance overview",
+                                "Live merchant sales + performance overview",
                                 "Commission rules and payout reconciliation",
-                                "Vendor-friendly POS setup for fast onboarding",
+                                "Merchant-friendly POS setup for fast onboarding",
                                 "Roles and staff access for event operations",
                             ].map((t) => (
                                 <li key={t} className="flex items-start gap-3">
@@ -83,28 +83,27 @@ export default function OrganizerComingSoonPage() {
                             </div>
 
                             <div className="mt-10 rounded-[20px] bg-[#F3F5F7] p-6 ring-1 ring-black/5">
-                                <p className="text-sm font-semibold text-[#2B55A0]">
+                                <p className="text-2xl font-semibold text-[#2B55A0]">
                                     Want to talk?
                                 </p>
-                                <p className="mt-2 text-[#111]/75">
+                                <p className="text-lg mt-2 text-[#111]/75">
                                     If you’re organizing an upcoming market,
                                     we’d love to learn your workflow and pain
                                     points.
                                 </p>
-                                <div className="mt-2 text-[#111]/75">
+                                <div className="text-lg mt-2 text-[#111]/75">
                                     <text>Email us at </text>
                                     <text className="font-bold">
-                                        wilson@takeawayevents.com
+                                        sales@takeawayevents.com
                                     </text>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
-                {/* Footer */}
-                <Footer />
             </main>
+            {/* Footer */}
+            <Footer />
         </div>
     );
 }
